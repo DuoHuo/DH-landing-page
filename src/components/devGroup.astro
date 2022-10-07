@@ -1,0 +1,52 @@
+---
+import ContentSection from "~/components/content-section.astro";
+import { Icon } from "astro-icon";
+import CompatibilityList from "~/components/compatibility-list.astro";
+
+const frameworks = [
+  {
+    title: "JavaScript",
+    icon: "logos:javascript",
+    url: "https://reactjs.org/",
+  },
+  {
+    title: "Java",
+    icon: "logos:java",
+    url: "https://preactjs.com/",
+  },
+  {
+    title: "Python",
+    icon: "vscode-icons:file-type-python",
+    url: "https://svelte.dev/",
+  },
+  {
+    title: "C++",
+    icon: "vscode-icons:file-type-cpp3",
+    url: "https://vuejs.org/",
+  },
+  {
+    title: "TypeScript",
+    icon: "vscode-icons:file-type-typescript-official",
+    url: "https://www.solidjs.com/",
+  },
+  {
+    title: "Rust",
+    icon: "vscode-icons:file-type-light-rust",
+    url: "https://lit.dev/",
+  },
+];
+---
+
+<ContentSection title="开发组" id="dev-group">
+  <Fragment slot="lead">
+    用{`<`}<span class="text-primary">代码</span>{`>`}实现我们的<span
+      class="text-primary"
+      >雄心
+    </span>
+  </Fragment>
+  <CompatibilityList
+    title="语言"
+    data={frameworks}
+    url="https://docs.astro.build/core-concepts/framework-components/"
+  />
+</ContentSection>
