@@ -1,38 +1,69 @@
 ---
 import ContentSection from "~/components/content-section.astro";
-import { Icon } from "astro-icon";
 import CompatibilityList from "~/components/compatibility-list.astro";
 
 const frameworks = [
   {
     title: "JavaScript",
     icon: "logos:javascript",
-    url: "https://reactjs.org/",
+    url: "https://developer.mozilla.org/",
   },
   {
     title: "Java",
     icon: "logos:java",
-    url: "https://preactjs.com/",
+    url: "https://java.com/",
   },
   {
     title: "Python",
     icon: "vscode-icons:file-type-python",
-    url: "https://svelte.dev/",
+    url: "https://python.org/",
   },
   {
     title: "C++",
     icon: "vscode-icons:file-type-cpp3",
-    url: "https://vuejs.org/",
   },
   {
     title: "TypeScript",
     icon: "vscode-icons:file-type-typescript-official",
-    url: "https://www.solidjs.com/",
+    url: "https://typescriptlang.org/",
   },
   {
     title: "Rust",
     icon: "vscode-icons:file-type-light-rust",
-    url: "https://lit.dev/",
+    url: "https://rust-lang.org/",
+  },
+];
+
+const projects = [
+  {
+    title: "QQ私服",
+    icon: "mdi:folder",
+    url: "https://github.com/Icalingua-plus-plus/Icalingua-plus-plus",
+  },
+  {
+    title: "龙猫校园变态版",
+    icon: "mdi:folder",
+    url: "https://github.com/lixiang810/totoroschool-autorun",
+  },
+  {
+    title: "学习通无敌版",
+    icon: "mdi:folder",
+    url: "https://github.com/Clansty/superstar-checkin",
+  },
+  {
+    title: "健康日报无限版",
+    icon: "mdi:folder",
+    url: "https://github.com/Clansty/NUISTHealthReport-Plus",
+  },
+  {
+    title: "大学习自动版",
+    icon: "mdi:folder",
+    url: "https://github.com/lixiang810/AntiFacistIndoctrination",
+  },
+  {
+    title: "南元门卫快速版",
+    icon: "mdi:folder",
+    url: "https://github.com/Clansty/nuist-goout-v2",
   },
 ];
 ---
@@ -48,5 +79,9 @@ const frameworks = [
     title="语言"
     data={frameworks}
     url="https://docs.astro.build/core-concepts/framework-components/"
+  />
+  <CompatibilityList
+    title="拳头项目"
+    data={projects}
   />
 </ContentSection>
