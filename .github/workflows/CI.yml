@@ -1,8 +1,7 @@
 name: Tencent Cloud Base Deploy
 
 on:
-  push:
-    branches: [ "master" ]
+  push
 
 jobs:
   build:
