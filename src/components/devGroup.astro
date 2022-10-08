@@ -5,12 +5,12 @@ import CompatibilityList from "~/components/compatibility-list.astro";
 const frameworks = [
   {
     title: "JavaScript",
-    icon: "logos:javascript",
+    icon: "vscode-icons:file-type-js-official",
     url: "https://developer.mozilla.org/",
   },
   {
     title: "Java",
-    icon: "logos:java",
+    icon: "vscode-icons:file-type-java",
     url: "https://java.com/",
   },
   {
@@ -23,9 +23,9 @@ const frameworks = [
     icon: "vscode-icons:file-type-cpp3",
   },
   {
-    title: "TypeScript",
-    icon: "vscode-icons:file-type-typescript-official",
-    url: "https://typescriptlang.org/",
+    title: "Go",
+    icon: "vscode-icons:file-type-go-gopher",
+    url: "https://golang.org/",
   },
   {
     title: "Rust",
@@ -70,7 +70,7 @@ const projects = [
 
 <ContentSection title="开发组" id="dev-group">
   <Fragment slot="lead">
-    用<span class="text-primary font-mono">{`<`}代码{`>`}</span>和智慧<br
+    用<span class="text-primary font-mono">{`<`}代码{`>`}</span>的洪流<br
     />实现我们的<span class="gradient-text">雄心</span>
   </Fragment>
   <CompatibilityList
