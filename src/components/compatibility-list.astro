@@ -23,7 +23,14 @@ const { title, data, url } = Astro.props;
       }
     </ul>
   </div>
-  <p class="text-sm text-right">
-    <a class="text-primary" href={url}> ...更多 &rarr;</a>
-  </p>
+  {
+    url && (
+      <p class="text-sm text-right">
+        <a class="text-primary" href={url}>
+          {" "}
+          ...更多 &rarr;
+        </a>
+      </p>
+    )
+  }
 </div>
