@@ -1,0 +1,27 @@
+---
+import ContentSection from "~/components/content-section.astro";
+import ShowcaseCard from "~/components/showcase-card.astro";
+import sites from "~/data/showcase/sites.json";
+---
+
+<ContentSection title="AI 组" id="compatibility">
+  <Fragment slot="lead">
+    以 <span class="text-primary">AI</span> 为抓手
+    <br />
+    赋能你的<span class="gradient-text">愿望</span>
+  </Fragment>
+  <div class="max-w-6xl space-y-2">
+    <p class="text-sm text-primary">
+      我们专注于
+    </p>
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {
+        sites.map(({ title, image }) => (
+          <ShowcaseCard title={title} image={image} />
+        ))
+      }
+    </div>
+
+  </div>
+  
+</ContentSection>

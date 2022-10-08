@@ -1,32 +1,22 @@
 [
   {
-    "title": "PoliNations",
-    "image": "src/data/showcase/images/polinations.png",
-    "url": "https://polinations.com/"
+    "title": "分布式学习",
+    "image": "src/data/showcase/images/1_hrWZcTx7Usc0ImGBdd3yVw.png"
   },
   {
-    "title": "Astro Docs",
-    "image": "src/data/showcase/images/astro-docs.png",
-    "url": "https://docs.astro.build/"
+    "title": "自然语言处理",
+    "image": "src/data/showcase/images/an-introduction-to-natural-language-processing-with-python-for-seos-5f3519eeb8368.png"
   },
   {
-    "title": "<div>RIOTS",
-    "image": "src/data/showcase/images/divriots.png",
-    "url": "https://divriots.com/"
+    "title": "计算机视觉",
+    "image": "src/data/showcase/images/Computer_vision.jpg"
   },
   {
-    "title": "Designcember",
-    "image": "src/data/showcase/images/designcember.png",
-    "url": "https://designcember.com/"
+    "title": "物联网",
+    "image": "src/data/showcase/images/iot.jpg"
   },
   {
-    "title": "The Firebase Blog",
-    "image": "src/data/showcase/images/firebase-blog.png",
-    "url": "https://firebase.blog/"
-  },
-  {
-    "title": "Corset",
-    "image": "src/data/showcase/images/corset.png",
-    "url": "https://corset.dev/"
+    "title": "强化学习",
+    "image": "src/data/showcase/images/Theme-navy_RL_header_12_2019__1920x720.png"
   }
 ]
