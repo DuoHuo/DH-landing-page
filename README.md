@@ -1,37 +1,23 @@
-# Astro Landing Page
+# DH 多火工作室官网
 
-An Astro + Tailwind CSS starter kit for landing pages.
+使用 Astro 开发
 
-![Screenshots of Astro Landing Page](screenshots.jpg)
+## 开发导引
 
-## Features
+请确保你有 node.js 16+ 的环境，进入此项目文件夹，运行：
 
-- 💨 Tailwind CSS for styling
-- 🎨 Themeable
-  - CSS variables are defined in `src/styles/theme.css` and mapped to Tailwind (`tailwind.config.cjs`)
-- 🌙 Dark mode
-- 📱 Responsive (layout, images, typography)
-- ♿ Accessible (as measured by https://web.dev/measure/)
-- 🔎 SEO-enabled (as measured by https://web.dev/measure/)
-- 🔗 Open Graph tags for social media sharing
+```bash
+corepack enable
+```
 
-## Commands
+然后使用以下指令打开开发环境
 
-| Command                | Action                                             |
-| :--------------------- | :------------------------------------------------- |
-| `npm install`          | Install dependencies                               |
-| `npm run dev`          | Start local dev server at `localhost:3000`         |
-| `npm run build`        | Build your production site to `./dist/`            |
-| `npm run preview`      | Preview your build locally, before deploying       |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro preview` |
-| `npm run astro --help` | Get help using the Astro CLI                       |
-| `npm run format`       | Format code with [Prettier](https://prettier.io/)  |
-| `npm run clean`        | Remove `node_modules` and build output             |
+```bash
+pnpm dev
+```
 
-## Credits
+使用以下指令构建
 
-- astronaut image
-  - source: https://github.com/withastro/astro-og-image; note: this repo is not available anymore
-- moon image
-  - source: https://unsplash.com/@nasa
-- other than that, a lot of material (showcase data, copy) was taken from official Astro sources, in particular https://astro.build/blog/introducing-astro/ and https://github.com/withastro/astro.build
+```bash
+pnpm build
+```
