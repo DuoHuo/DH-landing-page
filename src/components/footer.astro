@@ -1,17 +1,18 @@
 ---
 import { Icon } from "astro-icon";
 import HeroImage from "~/components/hero-image.astro";
+import QQgroup from "../assets/qQgroup.png";
 
 const links = [
   {
-    url: "https://jq.qq.com/?_wv=1027&k=G2p97KUX",
-    description: "加入QQ群",
+    url: "https://qm.qq.com/q/Vtogg2kdiO",
+    description: "加入新生QQ群",
     icon: "mdi:home",
-  }
+  },
 ];
 ---
 
-<footer class="relative flex items-center justify-center h-64">
+<footer class="relative flex items-center justify-center h-96">
   <div class="absolute inset-0 overflow-hidden opacity-40">
     <HeroImage />
   </div>
@@ -23,10 +24,17 @@ const links = [
             class="flex items-center justify-center w-26 h-16 p-4 border-2 border-current"
             href={link.url}
           >
-            <span class="">{link.description}</span>
+            <span class="font-bold">{link.description}</span>
           </a>
         </li>
       ))
     }
+    <li>
+    <img
+      class="flex items-center left-10 h-64"
+      src={QQgroup}
+      alt="DH社团23级新生群"
+    />
+    </li>
   </ul>
 </footer>

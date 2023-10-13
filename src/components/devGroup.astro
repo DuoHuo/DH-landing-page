@@ -36,39 +36,51 @@ const frameworks = [
 
 const projects = [
   {
-    title: "QQ私服",
+    title: "QQLinux",
     icon: "mdi:folder",
     url: "https://github.com/Icalingua-plus-plus/Icalingua-plus-plus",
   },
   {
-    title: "龙猫校园变态版",
+    title: "Hexo#",
     icon: "mdi:folder",
-    url: "https://github.com/lixiang810/totoroschool-autorun",
+    url: "https://github.com/BeiyanYunyi/HexoSharp",
   },
   {
-    title: "学习通无敌版",
+    title: "CDN加速",
     icon: "mdi:folder",
-    url: "https://github.com/Clansty/superstar-checkin",
+    url: "https://github.com/BeiyanYunyi/CloudflareSpeedTest-Rust",
   },
   {
-    title: "健康日报无限版",
+    title: "摩登UI引擎",
     icon: "mdi:folder",
-    url: "https://github.com/Clansty/NUISTHealthReport-Plus",
+    url: "https://github.com/BloCamLimb/ModernUI",
   },
   {
-    title: "大学习自动版",
+    title: "一键同学互评",
     icon: "mdi:folder",
-    url: "https://github.com/lixiang810/AntiFacistIndoctrination",
+    url: "https://github.com/Dustella/nuist-auto-peer-evaluation",
   },
   {
-    title: "南元门卫快速版",
+    title: "通量网络mod",
     icon: "mdi:folder",
-    url: "https://github.com/Clansty/nuist-goout-v2",
+    url: "https://github.com/SonarSonic/Flux-Networks",
+  },
+];
+const NUISTprojects = [
+  {
+    title: "NUISTcraft",
+    icon: "mdi:computer",
+    url: "https://nuistcraft.com",
+  },
+  {
+    title: "期末考试小助手",
+    icon: "mdi:book",
+    url: "https://nuistshare.cn",
   },
 ];
 ---
 
-<ContentSection title="开发组" id="dev-group">
+<ContentSection title="开发" id="dev-group">
   <Fragment slot="lead">
     用<span class="text-primary font-mono">{`<`}代码{`>`}</span>的洪流<br
     />实现我们的<span class="gradient-text">雄心</span>
@@ -76,10 +88,16 @@ const projects = [
   <CompatibilityList
     title="语言"
     data={frameworks}
+    grid="grid grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-6"
   />
   <CompatibilityList
     title="拳头项目"
     data={projects}
-    url="https://github.com/stars/lixiang810/lists/school-kits"
+    grid="grid grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-6"
+  />
+  <CompatibilityList
+    title="信大特殊服务"
+    data={NUISTprojects}
+    grid="grid grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-2"
   />
 </ContentSection>
