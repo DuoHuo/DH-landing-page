@@ -1,10 +1,10 @@
 # DH 多火工作室官网
 
-使用 Astro 开发
+使用 Astro TailwindCSS 开发
 
 ## 开发导引
 
-请确保你有 node.js 16+ 的环境，进入此项目文件夹，运行：
+请确保你有 node.js 16+ 的环境(v16.9.0+)，进入此项目文件夹，运行：
 
 ```bash
 corepack enable
