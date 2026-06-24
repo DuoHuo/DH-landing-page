@@ -16,23 +16,20 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Setup uv
-        uses: astral-sh/setup-uv@v5
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          enable-cache: true
-          cache-dependency-glob: "uv.lock"
+          node-version: '16' 
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-          
-      - name: Install Dependencies
-        run: uv sync --frozen
+      - name: Enable Corepack
+        run: corepack enable
 
-      - name: Build Site
-        run: uv run python -m zensical build --clean
+      - name: Install dependencies
+        run: pnpm install
 
+      - name: Build project
+        run: pnpm build
+        
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
