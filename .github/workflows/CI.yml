@@ -1,41 +1,41 @@
-name: Tencent Cloud Base Deploy
+name: Deploy to CF Pages
 
 on:
-  push
+  push:
+    branches:
+      - main
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
-
+    environment: 
+      name: CF-Pages
+      url: https://www.duohuo.org.cn
+    name: Build & Deploy
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout Code
+        uses: actions/checkout@v4
 
-      - name: Cache node modules
-        id: cache-npm
-        uses: actions/cache@v3
-        env:
-          cache-name: cache-node-modules
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v5
         with:
-          # npm cache files are stored in `~/.npm` on Linux/macOS
-          path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
-        
-      - name: Install dependency and build
-        run: | 
-         corepack enable
-         pnpm i
-         pnpm build
-        
-      - name: Push to Cloudbase
-        uses: TencentCloudBase/cloudbase-action@v2.0.1
+          enable-cache: true
+          cache-dependency-glob: "uv.lock"
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
-          # 云开发 secretId
-          secretId: ${{SECRETS.SID}}
-          # 云开发 secretKey
-          secretKey: ${{SECRETS.SKEY}}
-          # 云开发环境 Id
-          envId: ${{SECRETS.ENVID}}
+          python-version: '3.11'
+          
+      - name: Install Dependencies
+        run: uv sync --frozen
+
+      - name: Build Site
+        run: uv run python -m zensical build --clean
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          command: pages deploy ./site --project-name=dh-landing-page
